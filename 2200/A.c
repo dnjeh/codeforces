@@ -1,15 +1,18 @@
 #include <stdio.h>
 int main() {
-    int T, n, t, tt, f;
+    int a[10];
+    int T, n, tmax, tcnt;
     scanf("%d", &T);
     for(int _T=0;_T<T;_T++) {
-        f=0;
         scanf("%d", &n);
+        tmax=tcnt=0;
         for(int i=0;i<n;i++) {
-            scanf("%d", &t);
-            if(i&&t<tt) f=1;
-            tt=t;
+            scanf("%d", &a[i]);
+            if(tmax<a[i]) tmax=a[i];
         }
-        printf("%d\n", f?1:n);
+        for(int i=0;i<n;i++) {
+            if(tmax==a[i]) tcnt++;
+        }
+        printf("%d\n", tcnt);
     }
 }
