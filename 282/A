@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+    char t[5];
+    int X=0, n;
+    scanf("%d", &n);
+    for(int i=0;i<n;i++) {
+        scanf(" %s", t);
+        if(t[1]=='+') X++;
+        else X--;
+    }
+    printf("%d", X);
+    return 0;
+}
