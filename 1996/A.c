@@ -1,0 +1,10 @@
+#include <stdio.h>
+int main() {
+    int T, n;
+    scanf("%d", &T);
+    for(int _T=0;_T<T;_T++) {
+        scanf("%d", &n);
+        printf("%d\n", n/4+n%4/2);
+    }
+    return 0;
+}
